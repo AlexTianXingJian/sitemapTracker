@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SitemapTracker</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-lg-6">
+    <h1>New URL</h1>
+        {% for sitemap in new_urls %}
+            {{ sitemap.url }} Insert by {{ sitemap.modidate }}<br>
+        {% endfor %}
+    </div>
+    <div class="col-lg-6">
+    <h1>Deleted URL</h1>
+        {% for sitemap in delete_urls %}
+            {{ sitemap.url }} Delete by {{ sitemap.modidate }}<br>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
